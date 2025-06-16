@@ -82,7 +82,7 @@ function handleFailedLogin() {
         icon: "error",
         title: "Error de autenticación",
         text: "Credenciales incorrectas. Por favor verifica tu correo y contraseña.",
-        footer: '<a href="html/Recuperar.html">¿Olvidaste tu contraseña?</a>',
+        footer: '<a href="html/contraseña.html">¿Olvidaste tu contraseña?</a>',
         confirmButtonText: "Intentar de nuevo"
     });
 }
@@ -160,7 +160,7 @@ function confirmAction(title, text, confirmText = "Sí, continuar", cancelText =
 
 // Función para manejar el enlace de "¿Olvidaste tu contraseña?"
 function initForgotPasswordLink() {
-    const forgotPasswordLink = document.querySelector('a[href="html/Recuperar.html"]');
+    const forgotPasswordLink = document.querySelector('a[href="html/contraseña.html"]');
     if (forgotPasswordLink) {
         forgotPasswordLink.addEventListener('click', function(e) {
             e.preventDefault();
@@ -172,7 +172,7 @@ function initForgotPasswordLink() {
                 "Cancelar"
             ).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = "html/Recuperar.html";
+                    window.location.href = "html/contraseña.html";
                 }
             });
         });
