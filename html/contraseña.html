@@ -11,10 +11,10 @@
     <div class="card shadow-sm" style="max-width: 400px; width: 100%;">
       <div class="card-body">
         <h2 class="card-title text-center mb-4">Recuperar Contraseña</h2>
-        <form>
+        <form id="recuperarForm">
           <div class="mb-3">
             <label for="recoverEmail" class="form-label">Ingresa tu correo electrónico</label>
-            <input type="email" class="form-control" id="recoverEmail" placeholder="" required>
+            <input type="email" class="form-control" id="recoverEmail" placeholder="usuario@correo.com" required>
           </div>
           <button type="submit" class="btn btn-primary w-100">Enviar enlace</button>
         </form>
@@ -25,8 +25,25 @@
     </div>
   </div>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="js/recuperar.js"></script>
+  <script>
+    document.getElementById("recuperarForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("recoverEmail").value;
+
+      // Validación básica
+      if (email.trim() === "") return;
+
+      Swal.fire({
+        icon: "success",
+        title: "Enlace enviado",
+        text: "Revisa tu bandeja de entrada para continuar.",
+        confirmButtonText: "Aceptar"
+      }).then(() => {
+        // Simulación de enlace: redirige a nueva contraseña
+        window.location.href = "nueva_clave.html";
+      });
+    });
+  </script>
 </body>
 </html>
