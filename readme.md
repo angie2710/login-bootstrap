@@ -11,10 +11,13 @@ Este proyecto tiene como objetivo crear una interfaz de inicio de sesión (login
 /
 ├── index.html                # Página principal de Login
 ├── html/
-│   ├── login.html        # Formulario para registrar usuarios nuevos
+│   ├── registro.html        # Formulario para registrar usuarios nuevos
 │   └── contraseña.html        # Vista para recuperación de contraseña
+     └── pagina_principal.html        # Vista para página principal
+├── js/
+│   └── login.css           # Hoja de estilos externa común a todas las páginas     
 ├── css/
-│   └── estilos.css           # Hoja de estilos externa común a todas las páginas
+│   └── estilo.css           # Hoja de estilos externa común a todas las páginas
 ```
 
 ---
